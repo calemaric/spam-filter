@@ -43,14 +43,13 @@ def writeToCsv(json):
                            row["author"]["isAnonymous"],
                            row["author"]["username"],
                            row["author"]["reputationLabel"],
-                          row['isApproved'],
                           row['points'],
                           row['isSpam']])
 
 
 csv_file = csv.writer(open("data.csv", "w", encoding='utf-8'))
 csv_file.writerow(["raw_message", "dislikes", "num_reports", "likes", "author_is_anonymous", "author_username",
-                   "author_reputation_label", "is_approved", "points", "is_spam"])
+                   "author_reputation_label", "points", "is_spam"])
 
 url = createUrl("")
 
